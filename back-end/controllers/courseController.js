@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const throwCustomError = require('../utils/throwCustomError');
 const {
     getAllCourses,
-
+    updateEventById,
 } = require('../services/coursesServices');
 require('dotenv').config({ path: __dirname + '/../.env' });
 
@@ -230,6 +230,29 @@ const getLikedCourses = asyncHandler(async (req, res) => {
 
 });
 
+const updateEventByIdHandler = asyncHandler(async (req, res) => {
+    const { courseId } = req.params;
+    const { coursename, courseDescription, category, video  } = req.body;
+    // console.log(coursename);
+    if (!coursename && !courseDescription && !category && !video) {
+      throw throwCustomError("Nothing to update", 400);
+    }
+    
+    const eventUpdate = await updateEventById(courseId, coursename, courseDescription, category, video);
+    
+    const courses = await getAllCourses();
+    // console.log(courses);
+      res.json({
+        status: "success",
+        responseBody: {
+          courses: courses,
+        },
+        headers: {
+            "access-control-allow-origin": "*",
+          },
+      });
+  
+  });
 
 module.exports = {
     createCourse,
@@ -241,5 +264,6 @@ module.exports = {
     getRecent,
     getPopular,
     getLikedCourses,
+    updateEventByIdHandler,
 
 }

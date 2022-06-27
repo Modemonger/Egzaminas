@@ -10,7 +10,7 @@ const {
     getRecent,
     getPopular,
     getLikedCourses,
-
+    updateEventByIdHandler
 } = require("../controllers/courseController");
 const { 
     middleware
@@ -33,5 +33,7 @@ router.get('/get-user-courses/:id', getUserCourses);
 router.delete('/delete-course/:id', middleware.creatorAuthentication || middleware.adminAuthentication, deleteCourse);
 
 router.post('/like/:userId/:courseId',  addLike);
+
+router.post("/update-course/:courseId", updateEventByIdHandler);
 
 module.exports = router;

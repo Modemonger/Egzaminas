@@ -4,12 +4,13 @@ import { UserContext } from '../contexts/UserContext';
 import submitLike from '../util/submitLike';
 import deleteCourse from '../util/deleteCourse';
 import { compareRecent } from '../util/compare';
+import { useNavigate } from 'react-router-dom';
 
 export const MyCourses = () => {
 
     const {user, setUser} = useContext(UserContext);
     const [myCourses, setMyCourses] = useState([])
-
+    const navigate = useNavigate();
     myCourses.sort(compareRecent);
 
   
@@ -24,6 +25,10 @@ export const MyCourses = () => {
         let response = await deleteCourse(event, course, index, user, myCourses);
         // console.log(response);
         setMyCourses(response);
+    }
+
+    const handleUpdate = async (event, course, index) => {
+        navigate(`/update-course`,{state:{id: course}});
     }
 
     useEffect(() => {
@@ -62,6 +67,7 @@ export const MyCourses = () => {
                 return <div key={course._id} className="course">
                             <h3>{course.coursename}</h3>
                             <input className='delete' type="button" name='delete' value="X" onClick={event => handledelete(event, course, index)} />
+                            <input className='update' type="button" name='update' value="Edit" onClick={event => handleUpdate(event, course, index)} />
                             <p>{course.courseDescription}</p>
                             <iframe width="420" height='250' src={course.video}>
                             </iframe>

@@ -7,6 +7,7 @@ const throwCustomError = require("../utils/throwCustomError");
 
 const protect = asyncHandler(async (secret ,req, res, next) => {
   let token;
+  console.log(req.headers.authorization, 'middleware');
   // check for token in the headers (Using Bearer for use with postman)
   if (
     req.headers.authorization &&

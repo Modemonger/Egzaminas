@@ -1,0 +1,740 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.color1 {
+  color: #102339;
+}
+
+.color2 {
+  color: #284270;
+}
+
+.color3 {
+  color: #676ab4;
+}
+
+.color4 {
+  color: #c699fa;
+}
+
+.color5 {
+  color: #99bbff;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #284270;
+}
+
+body #root {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: hidden;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+body #root .navBtn {
+  width: 2rem;
+  height: 2rem;
+  font-size: 50px;
+  color: #99bbff;
+  text-decoration: none;
+  text-align: center;
+}
+
+body #root .navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 14rem;
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #102339;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: visibility 0ms linear 500ms, -webkit-transform 500ms;
+  transition: visibility 0ms linear 500ms, -webkit-transform 500ms;
+  transition: transform 500ms, visibility 0ms linear 500ms;
+  transition: transform 500ms, visibility 0ms linear 500ms, -webkit-transform 500ms;
+  z-index: 100;
+}
+
+body #root .navbar * {
+  margin: 1.5rem 0 .5rem 0;
+  text-decoration: none;
+  color: #99bbff;
+}
+
+body #root .navbar .backdrop {
+  position: absolute;
+  top: -.5rem;
+  right: 1rem;
+  width: 1rem;
+  height: 1rem;
+  font-size: 25px;
+  color: #99bbff;
+  text-decoration: none;
+  text-align: center;
+}
+
+body #root .navbar:target {
+  visibility: visible;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+body #root .signup {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+  margin-top: 5rem;
+  color: #99bbff;
+}
+
+body #root .signup .signupCard {
+  width: 35vw;
+}
+
+body #root .signup .signupCard .signupForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body #root .signup .signupCard .signupForm * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin: 0 0 .3rem 0;
+}
+
+body #root .signup .signupCard .signupForm * .radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body #root .signup .signupCard .signupForm * .radio input {
+  width: 1rem;
+  margin: 0 .5rem 0 .5rem;
+}
+
+body #root .signup .signupCard .signupForm .signupBtn {
+  width: 50%;
+  height: 2rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 435px) {
+  body #root .signup .signupCard {
+    width: 20rem;
+  }
+}
+
+body #root .myCourses {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  color: #99bbff;
+}
+
+body #root .myCourses .course {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1rem 0 1rem 0;
+  background-color: #676ab4;
+  width: 80%;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+body #root .myCourses .course h3 {
+  font-size: 25px;
+}
+
+body #root .myCourses .course .delete {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #e65050;
+}
+
+body #root .myCourses .course .update {
+  position: absolute;
+  top: 0;
+  right: 2.5rem;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #5080e6;
+}
+
+body #root .myCourses .course p {
+  margin: 1rem 0 1rem 0;
+}
+
+body #root .myCourses .course .likes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 18px;
+}
+
+body #root .myCourses .course .likes .likeButton {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0  0 0 .5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff6666;
+}
+
+body #root .myCourses .course iframe {
+  border: none;
+  width: 100%;
+}
+
+@media screen and (max-width: 425px) {
+  body #root .myCourses {
+    width: 20rem;
+  }
+}
+
+body #root .creatorPage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+}
+
+body #root form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  margin-top: 2rem;
+  color: #eee;
+}
+
+body #root form input {
+  height: 2rem;
+  width: 100%;
+  font-size: 20px;
+  background-color: #676ab4;
+  border: 0 solid #284270;
+  border-radius: 5px;
+  color: #eee;
+}
+
+body #root form textarea {
+  height: 8rem;
+  width: 100%;
+  font-size: 18px;
+  resize: none;
+  background-color: #676ab4;
+  border: #284270;
+  border-radius: 5px;
+  color: #eee;
+}
+
+body #root form select {
+  height: 3rem;
+  font-size: 18px;
+  background-color: #676ab4;
+  border: #284270;
+  border-radius: 5px;
+  color: #eee;
+}
+
+body #root form .submit {
+  border: none;
+  width: 50%;
+  border: none;
+  border-radius: 5px;
+  color: #eee;
+}
+
+body #root form .green {
+  background-color: #676ab4;
+}
+
+body #root form * {
+  width: 100%;
+}
+
+body #root form * span {
+  position: relative;
+  color: #e65050;
+}
+
+body #root form * .hide {
+  display: none;
+  position: absolute;
+  top: -.3rem;
+  left: 1.5rem;
+}
+
+body #root form * span:hover .hide {
+  display: inline;
+  font-size: 12px;
+}
+
+body #root form * * {
+  margin: .5rem 0 .5rem 0;
+}
+
+body #root .creatorPage form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  margin-bottom: 2rem;
+  color: #eee;
+}
+
+body #root .creatorPage form input {
+  height: 2rem;
+  width: 100%;
+  font-size: 20px;
+  background-color: #676ab4;
+  border: 0 solid #284270;
+  border-radius: 5px;
+  color: #eee;
+}
+
+body #root .creatorPage form textarea {
+  height: 8rem;
+  width: 100%;
+  font-size: 18px;
+  resize: none;
+  background-color: #676ab4;
+  border: #284270;
+  border-radius: 5px;
+  color: #eee;
+}
+
+body #root .creatorPage form select {
+  height: 3rem;
+  font-size: 18px;
+  background-color: #676ab4;
+  border: #284270;
+  border-radius: 5px;
+  color: #eee;
+}
+
+body #root .creatorPage form .submit {
+  border: none;
+  width: 50%;
+  border: none;
+  border-radius: 5px;
+  color: #eee;
+}
+
+body #root .creatorPage form .green {
+  background-color: #676ab4;
+}
+
+body #root .creatorPage form * {
+  width: 100%;
+}
+
+body #root .creatorPage form * span {
+  position: relative;
+  color: #e65050;
+}
+
+body #root .creatorPage form * .hide {
+  display: none;
+  position: absolute;
+  top: -.3rem;
+  left: 1.5rem;
+}
+
+body #root .creatorPage form * span:hover .hide {
+  display: inline;
+  font-size: 12px;
+}
+
+body #root .creatorPage form * * {
+  margin: .5rem 0 .5rem 0;
+}
+
+body #root .courses {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40vw;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  margin-top: 2rem;
+  color: #99bbff;
+}
+
+body #root .courses select {
+  height: 3rem;
+  font-size: 16px;
+  width: 100%;
+  background-color: #676ab4;
+  border: #284270;
+  border-radius: 5px;
+  color: #eee;
+}
+
+body #root .courses .course {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1rem 0 1rem 0;
+  background-color: #676ab4;
+  width: 90%;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+body #root .courses .course h3 {
+  font-size: 25px;
+}
+
+body #root .courses .course .delete {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 5px;
+}
+
+body #root .courses .course p {
+  margin: 1rem 0 1rem 0;
+}
+
+body #root .courses .course .likes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 18px;
+}
+
+body #root .courses .course .likes .likeButton {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0  0 0 .5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff6666;
+}
+
+body #root .courses .course iframe {
+  width: 100%;
+  border: none;
+}
+
+@media screen and (max-width: 425px) {
+  body #root .courses {
+    width: 20rem;
+  }
+}
+
+body #root .homepage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+body #root .homepage .popular {
+  background-color: #99bbff;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+body #root .homepage .popular .course {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1rem 0 1rem 0;
+  background-color: #676ab4;
+  width: 80%;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+body #root .homepage .popular .course h3 {
+  font-size: 25px;
+}
+
+body #root .homepage .popular .course .delete {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 5px;
+}
+
+body #root .homepage .popular .course p {
+  margin: 1rem 0 1rem 0;
+}
+
+body #root .homepage .popular .course .likes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 18px;
+  z-index: 101;
+}
+
+body #root .homepage .popular .course .likes .likeButton {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0  0 0 .5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff6666;
+}
+
+body #root .homepage .popular .course iframe {
+  width: 100%;
+  border: none;
+}
+
+body #root .homepage .recent {
+  background-color: #99bbff;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+body #root .homepage .recent .course {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1rem 0 1rem 0;
+  background-color: #676ab4;
+  width: 80%;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+body #root .homepage .recent .course h3 {
+  font-size: 25px;
+}
+
+body #root .homepage .recent .course .delete {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 5px;
+}
+
+body #root .homepage .recent .course p {
+  margin: 1rem 0 1rem 0;
+}
+
+body #root .homepage .recent .course .likes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 18px;
+}
+
+body #root .homepage .recent .course .likes .likeButton {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0  0 0 .5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff6666;
+}
+
+body #root .homepage .recent .course iframe {
+  width: 100%;
+  border: none;
+}
+/*# sourceMappingURL=style.css.map */

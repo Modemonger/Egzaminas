@@ -7,7 +7,8 @@ import { HomePage } from './pages/HomePage';
 import { Courses } from './pages/Courses';
 import { CourseProvider } from './contexts/CoursesContext';
 import { MyCourses } from './pages/MyCourses';
-// import './style/style.css'
+import EditPage from './pages/EditPage';
+import './style/style.css'
 function App() {
   return (
     <CourseProvider>
@@ -22,6 +23,7 @@ function App() {
               <Route path='/' element={<HomePage />} />
               <Route path='/courses' element={<Courses />} />
               <Route path='/my-courses' element={<MyCourses />} />
+              <Route path='/update-course' element={<EditPage />} />
           </Routes>
         </Router>
         

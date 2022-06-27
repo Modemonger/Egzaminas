@@ -6,6 +6,9 @@ const deleteCourse = async (event, course, index, user, courses) => {
     let config = {
         method: 'delete',
         url: `http://localhost:3001/api/courses/delete-course/${course._id}`,
+        autherization: { 
+            'Authorization': `Bearer ${user.token}`,
+        },
     };
     let newArr = [...courses];
 

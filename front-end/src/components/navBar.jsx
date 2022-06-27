@@ -23,7 +23,7 @@ const NavBar = () => {
                         <Link to='/courses'>Courses</Link>
                         <Link to='/' onClick={handleSingout}>Singout</Link>
                         <a href='#'><span className='backdrop'>X</span></a>
-                        <SearchBar />
+                        {/* <SearchBar /> */}
                         
                     </div>
                 );
@@ -37,7 +37,7 @@ const NavBar = () => {
                         <Link to='/my-courses'>My courses</Link>
                         <Link to='/' onClick={handleSingout}>Singout</Link>
                         <a href='#'><span className='backdrop'>X</span></a>
-                        <SearchBar />
+                        {/* <SearchBar /> */}
                     </div>
                 );
                 break;
