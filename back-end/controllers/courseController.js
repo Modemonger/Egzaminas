@@ -230,6 +230,7 @@ const getLikedCourses = asyncHandler(async (req, res) => {
 
 });
 
+
 module.exports = {
     createCourse,
     getCourses,

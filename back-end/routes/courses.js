@@ -28,7 +28,7 @@ router.get('/get-course/:id', getCourse);
 
 router.get('/get-liked-courses/:userId', middleware.creatorAuthentication || middleware.adminAuthentication || middleware.userAuthentication, getLikedCourses);
 
-router.get('/get-user-courses/:id', middleware.creatorAuthentication || middleware.adminAuthentication, getUserCourses);
+router.get('/get-user-courses/:id', getUserCourses);
 
 router.delete('/delete-course/:id', middleware.creatorAuthentication || middleware.adminAuthentication, deleteCourse);
 

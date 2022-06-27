@@ -252,10 +252,27 @@ const deleteUserHandler = asyncHandler(async (req, res) => {
   });
 });
 
+const getLecturers = asyncHandler(async (req, res) => {
+
+    const user = await User.find({status: 'Lecturer'}).select('-password -__v -email -admin');
+  
+    if (user) {
+        // console.log(user);
+      res.status(200).json({
+        status: "success",
+        responseBody: user,
+      });
+    } else {
+      throw throwCustomError("User not found", 400);
+    }
+  });
+
 module.exports = {
   registerUser,
   loginUser,
   getUser,
   updateUser,
   deleteUserHandler,
+  getLecturers,
+
 };
