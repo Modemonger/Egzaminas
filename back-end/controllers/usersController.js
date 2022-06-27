@@ -14,11 +14,11 @@ require("dotenv").config({ path: __dirname + "/../.env" });
 // function to create a token
 const generateToken = (id, status) => {
   switch (status) {
-    case 'learner':
+    case 'Learner':
       return jwt.sign({ id }, process.env.USER_SECRET, {
         expiresIn: "30d",
       });
-    case 'lecturer':
+    case 'Lecturer':
       return jwt.sign({ id }, process.env.CREATOR_SECRET, {
         expiresIn: "30d",
       });

@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
-// user has a name, email and password
-// we can add more later
+
 const userSchema = mongoose.Schema(
   {
     username: {
